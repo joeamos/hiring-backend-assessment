@@ -12,11 +12,11 @@ export class DecodeVinMiddleware implements ExpressMiddlewareInterface {
         req.body.make = response.data.Results[6].Value;
         req.body.model = response.data.Results[8].Value;
         req.body.year = response.data.Results[9].Value;
-        return next();
+        next();
       })
       .catch((error) => {
         console.log(error);
-        return next();
+        next();
       });
   }
 }
