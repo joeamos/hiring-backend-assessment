@@ -38,7 +38,6 @@ export class CarController {
   @Patch("/:id")
   @OnUndefined(CarNotFoundError)
   patch(@Param("id") id: string, @Body() body: Partial<CarsEntity>) {
-
     return CarsEntity.update(id, body);
   }
 
