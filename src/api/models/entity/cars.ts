@@ -7,16 +7,16 @@ export class CarsEntity extends BaseEntity {
   @PrimaryGeneratedColumn("uuid")
     id: string;
 
-  @Column()
+  @Column({update: false})
     vin: string;
 
-  @Column()
+  @Column({update: false})
     make: string;
 
-  @Column()
+  @Column({update: false})
     model: string;
 
-  @Column()
+  @Column({update: false})
     year: number;
 
   @Column()
